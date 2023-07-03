@@ -23,7 +23,9 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-
+app.get('/', function (req, res) {
+  res.send('hello world')
+  })
 app.use('/auth', require('./src/router/auth'));
 app.use('/user', require('./src/router/user'));
 app.use('/product', require('./src/router/product'));
